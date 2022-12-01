@@ -1,0 +1,43 @@
+.clients-section__title {
+    margin-bottom: 50px;
+}
+
+.client-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.client-list__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    background: var(--main-bgc-color);
+    outline: transparent;
+    transition: border-color var(--transition-duration);
+
+        &:hover,
+        &:focus {
+            border-color: var(--accent-color);
+            fill: var(--accent-color);
+        }
+}
+
+.client-list__icon {
+    width: 106px;
+    height: 60px;
+    fill: #afb1b8;
+    transition: fill var(--transition-duration);
+
+    .client-list__link:hover &,
+    .client-list__link:focus & {
+            border-color: var(--accent-color);
+            fill: var(--accent-color);
+}
+}
+
+
