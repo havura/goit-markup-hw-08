@@ -321,6 +321,20 @@ img {
   transform: translateX(0);
 }
 
+.mobile-menu__btn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__btn {
+    display: none;
+  }
+}
+
 .page-header {
   border-bottom: 1px solid var(--page-header-border);
 }
@@ -329,6 +343,13 @@ img {
 .page-header__conteiner {
   display: flex;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .page-header__conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .header__nav {
@@ -353,17 +374,20 @@ img {
 }
 
 .site-nav {
-  display: flex;
-  margin-left: 93px;
+  display: none;
 }
-.site-nav .site-nav__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+    margin-left: 93px;
+  }
+  .site-nav .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav .site-nav__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--secondary-text-color);
   font-size: 14px;
   line-height: 1.1;
@@ -374,22 +398,40 @@ img {
 .site-nav .site-nav__link:hover, .site-nav .site-nav__link:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .site-nav .site-nav__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
 
 /******** auth-nav*********/
 .auth-nav {
-  display: flex;
-  margin-left: auto;
+  display: none;
 }
-.auth-nav .auth-nav__item + .auth-nav__item {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .auth-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .auth-nav {
+    flex-direction: row;
+    display: flex;
+    margin-left: auto;
+  }
+  .auth-nav .auth-nav__item + .auth-nav__item {
+    margin-left: 30px;
+  }
 }
 
 .auth-nav .auth-nav__link {
   justify-content: center;
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: var(--main-text-color);
   font-size: 14px;
   line-height: 1.1;
