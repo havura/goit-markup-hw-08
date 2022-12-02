@@ -6,6 +6,11 @@
     justify-content: center;
     margin-left: auto;
 
+        &:hover,
+        &:focus {
+            fill: var(--accent-color);
+        }
+
     @include tablet {
         display: none;
     }
