@@ -1,11 +1,22 @@
 .features {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 30px;
+
+    @include desktop {
+        flex-wrap: nowrap;
+    }
 }
 
 .features__item {
-    flex-basis: calc((100% - 30px * 3) / 4);
+    flex-basis: calc(100% - 30px);
+
+    @include tablet {
+        flex-basis: calc((100% - 30px * 2) / 2);
+    }
+    @include desktop {
+        lex-basis: calc((100% - 30px * 3) / 4);
+    }
 }
 
 .features__title {
@@ -14,6 +25,10 @@
     line-height: 1.1;
     color: var(--secondary-text-color);
     letter-spacing: 0.03em;
+    text-align: center;
+    @include tablet {
+        text-align: start;
+    }
 }
 
 .features__text {
@@ -27,8 +42,17 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    width: 270px;
+    min-width: 450px;
     height: 120px;
     border-radius: 4px;
     background-color: var(--secondary-bgc-color);
+
+    @include tablet {
+        min-width: 354px;
+    }
+
+
+    @include desktop {
+        min-width: 270px;
+    }
 }
