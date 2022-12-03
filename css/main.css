@@ -86,15 +86,35 @@ img {
   }
 }
 
-.work-section__title,
-.team-section__title,
-.clients-section__title {
+.work-section__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   color: var(--secondary-text-color);
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+.team-section__title,
+.clients-section__title {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .team-section__title,
+.clients-section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    color: var(--secondary-text-color);
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
 }
 
 .backdrop {
@@ -759,13 +779,24 @@ img {
 }
 
 .clients-section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients-section__title {
+    margin-bottom: 50px;
+  }
 }
 
 .client-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .client-list {
+    flex-wrap: nowrap;
+  }
 }
 
 .client-list__link {
@@ -783,6 +814,16 @@ img {
 .client-list__link:hover, .client-list__link:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .client-list__link {
+    min-width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-list__link {
+    min-width: 170px;
+  }
 }
 
 .client-list__icon {
@@ -972,7 +1013,7 @@ img {
 @media screen and (min-width: 1200px) {
   .footer-contacts {
     align-items: start;
-    gab: 9px;
+    gap: 9px;
   }
 }
 

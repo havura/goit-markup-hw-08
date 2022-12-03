@@ -1,10 +1,32 @@
-.work-section__title,
-.team-section__title,
-.clients-section__title {
+.work-section__title
+                           {
     margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
     color: var(--secondary-text-color);
     letter-spacing: 0.03em;
     text-align: center;
+}
+
+
+.team-section__title,
+.clients-section__title {
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.8;
+        letter-spacing: 0.03em;
+        color: var(--secondary-text-color);
+
+        @include desktop {
+            margin-bottom: 50px;
+             font-size: 36px;
+            line-height: 1.17;
+            color: var(--secondary-text-color);
+            letter-spacing: 0.03em;
+            text-align: center;
+            }
+
+        
 }

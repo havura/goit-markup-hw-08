@@ -1,11 +1,21 @@
 .clients-section__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include desktop {
+        margin-bottom: 50px;
+    }
+   
 }
 
 .client-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
+
+    @include desktop {
+      flex-wrap: nowrap;
+    }
 }
 
 .client-list__link {
@@ -25,6 +35,13 @@
             border-color: var(--accent-color);
             fill: var(--accent-color);
         }
+    @include tablet {
+        min-width: 226px;
+    }
+    @include desktop {
+        min-width: 170px;
+    }
+
 }
 
 .client-list__icon {
