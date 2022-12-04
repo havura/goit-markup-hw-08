@@ -1,9 +1,21 @@
 .filter-list {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: start;
+    flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+
+    @include tablet {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+    @include desktop {
+            margin-bottom: 50px;
+    }
 }
 
 .filter-list__btn {

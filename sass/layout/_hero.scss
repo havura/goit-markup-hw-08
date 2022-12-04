@@ -1,31 +1,92 @@
 .hero {
     text-align: center;
-    background: var(--hero-footer-bgc);
-    padding-top: 200px;
-    padding-bottom: 200px;
-    height: 600px;
+    background-color: #C4C4C4;
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    background: var(--hero-footer-bgc);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero-bg.jpg);
+        url("../images/hero-480@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 768px),
+screen and (min-resolution: 192dpi) and (max-width: 768px),
+screen and (min-resolution: 2dppx) and (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url("../images/hero-480@2x.jpg");
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url("../images/hero-768@1x.jpg");
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url("../images/hero-768@2x.jpg");
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url("../images/hero-1200@1x.jpg");
+
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (min-resolution: 192dpi) and (min-width: 1200px),
+screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url("../images/hero-1200@2x.jpg");
+    }
+}
+
+
+
 .hero__title {
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--main-bgc-color);
-    width: 696px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 1.6;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--main-bgc-color);
+
+    @include tablet {
+        max-width: 360px;
+    }
+
+    @include desktop {
+            
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.4;
+            max-width: 696px;
+    }
+   
 }
 
 .hero__btn {
@@ -37,7 +98,7 @@
     line-height: 30px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 10px 24px;
     border: 0px;
     letter-spacing: 0.06em;
     transition: background-color var(--transition-duration), color var(--transition-duration);
@@ -45,6 +106,9 @@
         &:hover,
         &:focus {
             background-color: var(--hero-btn-hov-foc);
+        }
+        @include desktop {
+          padding: 10px 32px;
         }
 }
 

@@ -13,7 +13,20 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc((100% - 30px * 2) / 3);
+   
+}
+.portfolio-list__item {
+
+    flex-basis: calc(100% - 30px);
+    @include tablet {
+        flex-basis: calc((100% - 30px)/2);
+    }
+   
+    @include desktop {
+        flex-basis: calc((100% - 30px * 2) / 3);
+    }
+   
+
 }
 
 .portfolio-border {
