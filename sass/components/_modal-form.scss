@@ -98,7 +98,7 @@
 .check__icon {
     border: 2px solid var(--secondary-text-color);
     border-radius: 2px;
-    margin-right: 10px;
+    margin-right: 8px;
     fill: var(--main-bgc-color);
 
     .check__input:checked + & {
@@ -117,15 +117,22 @@
 
 .check__link {
     color: var(--accent-color);
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.03em;
+    @include desktop {
+            font-size: 14px;
+        }
 }
 
 .check__text {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.03em;
+
+    @include desktop {
+        font-size: 14px;
+    }
 }
 
 .form__btn {

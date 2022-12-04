@@ -3,16 +3,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 528px;
+    height: 609px;
+    width: 450px;
     background: var(--main-bgc-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @include desktop {
+    width: 528px;
+    }
 }
 
 .modal__close-btn {
     position: absolute;
-    top: 8px;
+    top: 14px;
     right: 8px;
     display: flex;
     justify-content: center;
@@ -29,6 +34,9 @@
         &:hover .modal__close-btn-icon,
         &:focus .modal__close-btn-icon {
             fill: var(--accent-color);
+        }
+        @include desktop {
+            top: 8px;
         }
 }
 
