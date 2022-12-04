@@ -1,15 +1,27 @@
 .team {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 30px;
+        flex-wrap: wrap;
+        gap: 30px;
+    
+        @include desktop {
+            flex-wrap: nowrap;
+        }
 }
 
 .team__item {
-    flex-basis: calc((100% - 30px * 3) / 4);
+    flex-basis: calc(100% - 30px);
     background-color: var(--main-bgc-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+
+    @include tablet {
+        flex-basis: calc((100% - 30px * 2) / 2);
+    }
+
+    @include desktop {
+        flex-basis: calc((100% - 30px * 3) / 4);
+    }
 }
 
 .team-section {
@@ -71,6 +83,12 @@
             fill: var(--main-bgc-color);
         }
 }
+.team-section__title {
+        margin-bottom: 30px;
 
+        @include desktop {
+            margin-bottom: 50px;
+        }
+}
 
 

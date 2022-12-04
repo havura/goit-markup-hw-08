@@ -26,6 +26,7 @@
     color: var(--secondary-text-color);
     letter-spacing: 0.03em;
     text-align: center;
+    
     @include tablet {
         text-align: start;
     }
