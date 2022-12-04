@@ -973,18 +973,18 @@ img {
 
 .filter-list {
   display: flex;
-  justify-content: start;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
+  max-width: 400px;
   margin-bottom: 40px;
+  gap: 8px;
 }
 @media screen and (min-width: 768px) {
   .filter-list {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 8px;
-    margin-bottom: 40px;
+    max-width: unset;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1051,7 +1051,7 @@ img {
 .portfolio-list__title {
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: var(--secondary-text-color);
   margin-bottom: 4px;
 }

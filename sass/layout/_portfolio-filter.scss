@@ -1,17 +1,17 @@
 .filter-list {
     display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 400px;
+        margin-bottom: 40px;
+        gap: 8px;
     
 
     @include tablet {
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
-            gap: 8px;
-            margin-bottom: 40px;
+            max-width: unset;
         }
 
     @include desktop {
