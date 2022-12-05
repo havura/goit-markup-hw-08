@@ -1,8 +1,6 @@
 .form {
     display: flex;
     flex-direction: column;
-    padding-left: 40px;
-    padding-right: 40px;
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -88,23 +86,31 @@
 }
 
 .check-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    cursor: pointer;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
 }
 
 .check__icon {
     border: 2px solid var(--secondary-text-color);
     border-radius: 2px;
-    margin-right: 8px;
     fill: var(--main-bgc-color);
 
     .check__input:checked + & {
             background-color: var(--accent-color);
             border-color: transparent;
         }
+    @include mobile {
+        margin-right: 8px;
+    }
 }
 
 .check__own-icon {
