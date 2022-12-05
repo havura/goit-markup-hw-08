@@ -104,8 +104,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 357px;
     column-gap: 10px;
+    @include mobile {
+       justify-content: flex-start;
+    }
 }
 
 .sociale-site__item {
@@ -115,9 +117,9 @@
 }
 
 .sociale-site__link {
+    font-size: 12px;
+    line-height: 2;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
     letter-spacing: 0.02em;
 
     color: var(--accent-color);
@@ -127,13 +129,22 @@
     &:focus {
         color: var(--accent-color);
     }
+    @include mobile {
+        font-size: 18px;
+        line-height: 1.22;
+    }
 }
 
 .sociale-site__line {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 8px;
+    color: rgba(33, 33, 33, .2);
+    @include mobile {
+        margin-left: 10px;
+    }
 }
+
 .mobile-menu__contact {
     margin-bottom: 32px;
 }
