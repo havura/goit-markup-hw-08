@@ -1,5 +1,8 @@
 .portfolio-list__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // display: block;
     transition: box-shadow var(--transition-duration);
     &:hover,
     &:focus {
@@ -17,7 +20,7 @@
 }
 .portfolio-list__item {
 
-    flex-basis: calc(100% - 30px);
+    flex-basis:100%;
     @include tablet {
         flex-basis: calc((100% - 30px)/2);
     }
@@ -33,6 +36,7 @@
     border: 1px solid var(--portfolio-border);
     border-top: none;
     padding: 20px 24px;
+    flex-grow: 1;
 }
 
 .portfolio-list__title {
