@@ -153,7 +153,7 @@ img {
 
 .modal__close-btn {
   position: absolute;
-  top: 14px;
+  top: 20px;
   right: 8px;
   display: flex;
   justify-content: center;
@@ -404,7 +404,7 @@ img {
   font-size: 34px;
   line-height: 1.76;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--accent-color);
   transition: color var(--transition-duration);
 }
 .mobile-menu__contact-link--tell:hover, .mobile-menu__contact-link--tell:focus {
@@ -445,7 +445,7 @@ img {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--accent-color);
   transition: color var(--transition-duration);
 }
 .sociale-site__link:hover, .sociale-site__link:focus {
