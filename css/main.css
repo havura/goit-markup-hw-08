@@ -401,7 +401,7 @@ img {
 
 .mobile-menu__contact-link--tell {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.76;
   letter-spacing: 0.02em;
   color: var(--accent-color);
@@ -409,6 +409,11 @@ img {
 }
 .mobile-menu__contact-link--tell:hover, .mobile-menu__contact-link--tell:focus {
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__contact-link--tell {
+    font-size: 34px;
+  }
 }
 
 .mobile-menu__contact-link--mail {
@@ -589,6 +594,8 @@ img {
 @media screen and (min-width: 1200px) {
   .auth-nav .auth-nav__link {
     font-size: 14px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 

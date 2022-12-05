@@ -65,7 +65,7 @@
 
 .mobile-menu__contact-link--tell {
     font-weight: 500;
-    font-size: 34px;
+    font-size: 28px;
     line-height: 1.76;
     letter-spacing: 0.02em;
 
@@ -75,6 +75,9 @@
     &:hover,
     &:focus {
         color: var(--accent-color);
+    }
+    @include mobile {
+        font-size: 34px;
     }
 }
 
